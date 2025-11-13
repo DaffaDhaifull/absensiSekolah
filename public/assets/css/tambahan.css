@@ -1,0 +1,153 @@
+/* Container utama */
+.select2-container {
+  /* width: 100% !important; */
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  z-index: 1089 !important;
+}
+
+/* Kotak select */
+.select2-container .select2-selection--single{
+  height: 40px;
+  padding: 6px 12px;
+  color:#697A8D ;
+  border: 1px solid #d1d5db; /* abu2 terang */
+  border-radius: 0.5rem; /* rounded */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Saat fokus */
+.select2-container--default .select2-selection--single:focus,
+.select2-container--default.select2-container--open .select2-selection--single {
+  border-color: #7367f0; /* ungu Sneat */
+  box-shadow: 0 0 0 px rgba(115, 103, 240, 0.25);
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+  border: 1px solid transparent !important; 
+  box-shadow: none !important; 
+}
+
+/* Text option terpilih */
+.select2-container .select2-selection__rendered {
+  color: #697A8D;
+  line-height: 28px;
+}
+
+/* Icon panah */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 100%;
+  right: 12px;
+}
+
+/* Dropdown */
+.select2-dropdown{
+   z-index: 1089 !important;
+  margin-top: 4px;          /* beri jarak kecil dari input */
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;    /* tetap rounded */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;         /* supaya rounded kelihatan */
+  padding: 3px;               /* jangan ada padding global */
+  background: #fff;
+}
+
+/* Scroll hanya di dalam daftar option */
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;                /* rapat */
+  padding: 4px;             /* sedikit ruang di dalam */
+  box-sizing: border-box;
+}
+
+/* Item option */
+.select2-results__option {
+  cursor: pointer;
+  padding: 8px 12px !important;
+  margin: 2px 0;               /* lebih rapat */
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+/* Hover */
+.select2-results__option--highlighted {
+  background-color: #f0f0ff !important;
+  color: #7367f0 !important;
+}
+
+/* Aktif / terpilih */
+.select2-results__option[aria-selected="true"] {
+  background-color: #E7E7FF !important;
+  color: #696CFF !important;
+}
+
+/* Input search di dalam dropdown */
+.select2-container--default .select2-search--dropdown {
+  padding: 6px 8px; /* beri ruang tapi tetap dalam rounded box */
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Style untuk form-select-sm */
+.form-select-sm {
+  font-family: "Inter", sans-serif; /* Tetap menggunakan font yang sama */
+  font-size: 12px;  /* Ukuran font lebih kecil */
+  height: 36px;     /* Sesuaikan tinggi untuk select kecil */
+  padding: 4px 8px; /* Padding lebih kecil */
+  border: 1px solid #d1d5db; /* Border abu-abu terang */
+  border-radius: 0.375rem; /* Lebih kecil rounded-nya */
+  background-color: #fff; /* Latar belakang putih */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Kotak select untuk form-select-sm */
+.form-select-sm.select2-container .select2-selection--single {
+  height: 36px; /* Menyesuaikan height dengan form-select-sm */
+  padding: 4px 8px; /* Padding lebih kecil */
+  border-radius: 0.375rem; /* Rounded lebih kecil */
+}
+
+/* Saat fokus pada form-select-sm */
+.form-select-sm.select2-container--default .select2-selection--single:focus,
+.form-select-sm.select2-container--default.select2-container--open .select2-selection--single {
+  border-color: #7367f0; /* Warna border ungu */
+  box-shadow: 0 0 0 2px rgba(115, 103, 240, 0.25); /* Penambahan shadow saat fokus */
+}
+
+/* Text option terpilih untuk form-select-sm */
+.form-select-sm.select2-container .select2-selection__rendered {
+  color: #697A8D; /* Warna teks gelap */
+  line-height: 20px; /* Menyesuaikan line-height dengan ukuran font lebih kecil */
+}
+
+/* Icon panah untuk form-select-sm */
+.form-select-sm.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 100%;
+  right: 8px; /* Posisi lebih dekat */
+}
+
+/* Dropdown untuk form-select-sm */
+.form-select-sm.select2-dropdown {
+  z-index: 1089 !important;
+  margin-top: 4px; /* Jarak kecil dari input */
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem; /* Rounded lebih kecil */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 4px;
+  background: #fff;
+}
+
+
