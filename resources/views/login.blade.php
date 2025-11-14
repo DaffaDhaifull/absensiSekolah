@@ -15,12 +15,12 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>SD-BIC | Login</title>
+    <title>{{ App\Models\SchoolData::first()->namaSingkat}} | Login</title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logo/' . App\Models\SchoolData::first()->logo) }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,9 +62,9 @@
           <div class="card">
             <div class="card-body">
                 <h1 class="w-100 text-center">Selamat Datang</h1>
-              
+
                 <h6 class="mb-2 fw-bold mt-4">Perhatian!</h6>
-                <p class="mb-4">Hanya pihak sekolah SD Bina Insan Cendikia yang dapat login, dan akun dibuat melalui admin</p>
+                <p class="mb-4">Hanya pihak sekolah {{App\Models\SchoolData::first()->namaSekolah}} yang dapat login, dan akun dibuat melalui admin</p>
 
 
                 @if ($errors->any())

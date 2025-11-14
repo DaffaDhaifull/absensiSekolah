@@ -16,7 +16,7 @@ class LaporanAbsensiExport implements FromView
     protected $tanggal_range;
     protected $kelas_id;
 
-    public function __construct($tanggal_range, $kelas_id = null)                                      
+    public function __construct($tanggal_range, $kelas_id = null)
     {
         $this->tanggal_range = $tanggal_range;
         $this->kelas_id = $kelas_id;
@@ -53,19 +53,19 @@ class LaporanAbsensiExport implements FromView
             }
         }
 
-        $judul_lap = $this->judul ?? 'Laporan Absensi';
-        $bulanUnik = collect($this->tanggal_range)
+        $bulan = collect($this->tanggal_range)
             ->map(fn($tgl) => Carbon::parse($tgl)->format('Y-m'))
             ->unique()
-            ->count();
+            ->values();;
 
-        $viewFile = $bulanUnik > 1
+        $viewFile = $bulan->count() > 1
             ? 'data.excel_absensi_semester'
             : 'data.excel_absensi_bulanan';
 
         return view($viewFile, [
             'siswa' => $siswa,
             'absensi' => $absensi,
+            'bulanTerpilih' => $bulan,
             'tanggal_range' => $this->tanggal_range,
             'kelas'=> $kelas,
             'sekolah' => $sekolah,

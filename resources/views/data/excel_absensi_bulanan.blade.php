@@ -32,7 +32,7 @@
         </tr>
         <tr>
             @foreach($tanggal_range as $tgl)
-                <th style="border:1px solid #000; text-align:center;">
+                <th style="border:1px solid #000; text-align:center; width:30px;">
                     {{ \Carbon\Carbon::parse($tgl)->format('d') }}
                 </th>
             @endforeach
@@ -56,7 +56,7 @@
                     {{ $s->jenis_kelamin == 'Perempuan' ? 'P' : 'L' }}
                 </td>
                 @foreach($tanggal_range as $tgl)
-                    <td style="border:1px solid #000; text-align:center;">
+                    <td style="border:1px solid #000; text-align:center; width:30px;">
                         {{ $absensi[$s->nis][$tgl] ?? '' }}
                     </td>
                 @endforeach

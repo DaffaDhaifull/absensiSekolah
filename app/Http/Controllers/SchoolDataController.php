@@ -31,7 +31,7 @@ class SchoolDataController extends Controller
 
         $school = SchoolData::first();
         $filename = $school->logo;
-
+        
         if ($request->hasFile('logo')) {
             if ($school && $school->logo && file_exists(public_path('assets/img/logo/' . $school->logo))) {
                 unlink(public_path('assets/img/logo/' . $school->logo));
